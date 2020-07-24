@@ -53,6 +53,6 @@ def run(i):
 call(['make','-j'])
 scores = []
 with Pool(max_workers=parallel) as executor:
-    for i in executor.map(run, run_list):
+    for i in executor.map(run, run_list[0:1]):
         pass
 print("Done!       ")

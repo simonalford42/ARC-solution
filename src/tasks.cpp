@@ -6,6 +6,7 @@ using namespace std;
 #include "image_functions.hpp"
 #include "image_functions2.hpp"
 #include "visu.hpp"
+#include <map>
 #include "read.hpp"
 #include "normalize.hpp"
 #include "spec.hpp"
@@ -364,7 +365,16 @@ void evalTasks() {
       visu.add(in,out);
       }*/
 
+    cout << "Task " << si << "(train0_in, train0_out, test_in, prediction)" << endl;
+    print(s.train[0].first);
+    print(s.train[0].second);
+    cout << "Test:" << endl;
+    print(s.test[0].first);
+    cout << "Pred:" << endl;
     Image pred = solveTask(s.test[0].first, s.train, si);
+    print(pred);
+    cout << "Actual:" << endl;
+    print(s.test[0].second);
     cout << "Task " << si << ": " << (pred == s.test[0].second ? "OK" : "Failed") << endl;
     corrects += (pred == s.test[0].second);
     if (pred != s.test_out) {// && pred != s.test_in) {

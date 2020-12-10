@@ -1,7 +1,7 @@
 #include "precompiled_stl.hpp"
 
 using namespace std;
-#include <map>
+
 #include "utils.hpp"
 #include "core_functions.hpp"
 #include "image_functions.hpp"

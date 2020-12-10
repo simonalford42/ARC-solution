@@ -9,7 +9,6 @@ using namespace std;
 #include "brute2.hpp"
 #include "pieces.hpp"
 #include "compose2.hpp"
-#include <map>
 
 #include "timer.hpp"
 

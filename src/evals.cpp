@@ -1,7 +1,6 @@
 #include "precompiled_stl.hpp"
 using namespace std;
 #include "utils.hpp"
-#include <map>
 #include "read.hpp"
 #include "visu.hpp"
 #include "core_functions.hpp"

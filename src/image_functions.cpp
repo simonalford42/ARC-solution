@@ -1,9 +1,9 @@
 #include "precompiled_stl.hpp"
-#include <vector>
+/*#include <vector>
 #include <cassert>
 #include <queue>
 #include <tuple>
-#include <functional>
+#include <functional>*/
 using namespace std;
 
 #include "utils.hpp"

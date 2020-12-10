@@ -4,7 +4,6 @@ using namespace std;
 #include "core_functions.hpp"
 #include "image_functions.hpp"
 #include "spec.hpp"
-#include <map>
 #include "read.hpp"
 #include "normalize.hpp"
 

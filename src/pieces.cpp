@@ -2,6 +2,7 @@
 #include <chrono>
 using namespace std;
 #include "utils.hpp"
+#include <map>
 #include "read.hpp"
 #include "normalize.hpp"
 #include "core_functions.hpp"

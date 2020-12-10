@@ -1,4 +1,6 @@
 #include "runner.hpp"
+#include <iostream>
+#include "tasks.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,7 +9,7 @@
 int main(int argc, char**argv) {
   //rankFeatures();
   //evalNormalizeRigid();
-  //evalTasks();
+  // evalTasks();
   //bruteSubmission();
   //bruteSolve();
   int only_sid = -1;

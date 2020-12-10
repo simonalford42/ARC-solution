@@ -1,11 +1,12 @@
-/*#include <vector>
+#include <vector>
 #include <regex>
 #include <cassert>
-#include <iostream>*/
+#include <iostream>
 #include "precompiled_stl.hpp"
 #include <experimental/filesystem>
 
 using namespace std;
+#include <map>
 #include "utils.hpp"
 #include "read.hpp"
 

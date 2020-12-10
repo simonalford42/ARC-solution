@@ -1,7 +1,7 @@
 #include "precompiled_stl.hpp"
 
 using namespace std;
-
+#include <map>
 #include "utils.hpp"
 #include "core_functions.hpp"
 #include "image_functions.hpp"
@@ -76,7 +76,8 @@ void run(int only_sid = -1, int arg = -1) {
 
   int skips = 0;
 
-  string sample_dir = "evaluation";
+  /* string sample_dir = "evaluation"; */
+  string sample_dir = "training";
   int samples = -1;
   if (eval) {
     sample_dir = "test";

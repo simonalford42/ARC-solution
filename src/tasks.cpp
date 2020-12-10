@@ -6,6 +6,7 @@ using namespace std;
 #include "image_functions.hpp"
 #include "image_functions2.hpp"
 #include "visu.hpp"
+#include <map>
 #include "read.hpp"
 #include "normalize.hpp"
 #include "spec.hpp"
@@ -341,6 +342,7 @@ void evalTasks() {
   int place_count[11] = {};
   //#pragma omp parallel for
   for (int si = 0; si < sample.size(); si++) {
+      /* cout << sample[si].id << endl; */
     Sample&s = sample[si];
     {
       vector<Simplifier> sims;
@@ -363,10 +365,24 @@ void evalTasks() {
     for (auto [in,out] : s.train) {
       visu.add(in,out);
       }*/
-
-    Image pred = solveTask(s.test[0].first, s.train, si);
-    cout << "Task " << si << ": " << (pred == s.test[0].second ? "OK" : "Failed") << endl;
-    corrects += (pred == s.test[0].second);
+    Image pred;
+    bool success = false;
+    for (int si2 = 0; si2 < 102; si2++) {
+        pred = solveTask(s.test[0].first, s.train, si2);
+        success = pred == s.test[0].second;
+        if (success) {
+            cout << "Task " << s.id << " solved with program " << si2 << endl;
+            corrects += 1;
+            break;
+        }
+    }
+    if (!success)
+        cout << "Task " << s.id << " failed" << endl;
+    /* print(pred); */
+    /* cout << "Actual:" << endl; */
+    /* print(s.test[0].second); */
+    /* cout << "Task " << si << ": " << (pred == s.test[0].second ? "OK" : "Failed") << endl; */
+    /* corrects += (pred == s.test[0].second); */
     if (pred != s.test_out) {// && pred != s.test_in) {
       visu.next(to_string(si));//s.id);
       visu.add(s.test_in, pred);

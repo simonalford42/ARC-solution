@@ -40,7 +40,7 @@ for line in combined:
 outf.close()
 exit(0)
 """
-inds = range(0,419)
+inds = range(0,416)
 
 inds = list(inds)
 compressed = ''
@@ -71,9 +71,12 @@ for i in inds:
 
     t = read('store/tmp/%d_err.txt'%i)
     if t:
-        memories.append([int(t.split('maxresident')[0].split(' ')[-1]), i])
-        m,s = t.split('elapsed')[0].split(' ')[-1].split(':')
-        times.append([float(m)*60+float(s), i])
+        try:
+            memories.append([int(t.split('maxresident')[0].split(' ')[-1]), i])
+            m,s = t.split('elapsed')[0].split(' ')[-1].split(':')
+            times.append([float(m)*60+float(s), i])
+        except:
+            pass
 
 for i in range(3,0,-1):
     score[i-1] += score[i]

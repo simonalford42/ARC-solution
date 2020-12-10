@@ -6,6 +6,7 @@ using namespace std;
 #include "core_functions.hpp"
 #include "image_functions.hpp"
 #include "visu.hpp"
+#include <map>
 #include "read.hpp"
 
 int main() {

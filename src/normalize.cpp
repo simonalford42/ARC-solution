@@ -1,10 +1,10 @@
 #include "precompiled_stl.hpp"
-/*#include <cassert>
+#include <cassert>
 #include <functional>
 #include <vector>
 #include <iostream>
 #include <map>
-#include <cmath>*/
+#include <cmath>
 using namespace std;
 
 #include "utils.hpp"

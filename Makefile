@@ -5,6 +5,8 @@ FLAGS = -std=c++17 -g -O2 #-fopenmp # $(DEBUG)
 # LIBS = -lstdc++fs
 # LIBS = -filesystem
 # LIBS = -lstdc++
+# LIBS = -lstdc++ -lstdc++fs
+LIBS = -lstdc++
 
 .DEFAULT_GOAL := run
 

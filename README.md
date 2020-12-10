@@ -1,3 +1,8 @@
+## Icecuber ARC
+This is a fork of Icecuber's winning Kaggle solution. I had to modify some of the code to make it run on my machine. Instructions on using remain the same as described below.
+
+## Readme from Icecuber
+
 Hello!
 
 Below you can find a outline of how to run my solution to Kaggle's Abstraction and Reasoning Challenge.
